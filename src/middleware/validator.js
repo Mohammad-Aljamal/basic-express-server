@@ -1,11 +1,11 @@
 function validator(){
     return (req,res,next) => {
 
-        if(typeof req.params.name == "string"){ ///////////////////////////////
-            req.name = req.params.name;
+        if(typeof req.body.name == "string"){ ///////////////////////////////
+            req.name = req.body.name;
             next();
         }else{
-            next(`the ${req.params.name} is not string`);
+            next(`the ${req.body.name} is not string`);
         }
         
     }

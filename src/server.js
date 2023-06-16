@@ -18,7 +18,7 @@ app.use(logger);
 app.get("/", homeHandler);
 app.get("/data", stamper , dataHandler);
 
-app.get("/person/:name", validator(), personHandler);
+app.get("/person", validator(), personHandler);
 
 // ---------------------------- handler's ---------------------
 
